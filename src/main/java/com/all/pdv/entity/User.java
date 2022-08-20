@@ -3,6 +3,7 @@ package com.all.pdv.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 @AllArgsConstructor
@@ -15,6 +16,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(length = 100, nullable = false)
+    @NotBlank(message = "Campo nome é obrigatório")
     private String name;
     private boolean isEnabled;
 

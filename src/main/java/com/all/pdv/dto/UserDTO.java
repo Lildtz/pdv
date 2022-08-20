@@ -9,9 +9,8 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class SaleDTO {
-
-    private Long user_id;
-
-    List<ProductSaleDTO> items;
+public class UserDTO {
+    private long id;
+    private String name;
+    private boolean isEnabled;
 }
